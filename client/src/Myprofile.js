@@ -127,16 +127,17 @@ const Myprofile = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [review, setReview] = useState([]);
-
+    // const url='http://localhost:5001/myprofile'
+  const url='https://developershub-3svr.onrender.com'
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const profileRes = await axios.get("http://localhost:5001/myprofile", {
+        const profileRes = await axios.get(`${url}/myprofile`, {
           headers: { "x-token": localStorage.getItem("token") },
         });
         setData(profileRes.data);
 
-        const reviewRes = await axios.get("http://localhost:5001/myreview", {
+        const reviewRes = await axios.get(`${url}/myreview`, {
           headers: { "x-token": localStorage.getItem("token") },
         });
         setReview(reviewRes.data);

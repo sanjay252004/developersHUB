@@ -91,12 +91,13 @@ const Indprofile = () => {
   const [rating, setRating] = useState(null);
   const [taskprovider, setTaskprovider] = useState(null);
   const { fullname, email, id } = useParams(); // Get parameters from the URL
-
+  // const url='http://localhost:5001/myprofile'
+  const url='https://developershub-3svr.onrender.com'
   const submitHandler = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
 
     axios
-      .get('http://localhost:5001/myprofile', {
+      .get(`${url}/myprofile`, {
         headers: {
           'x-token': localStorage.getItem('token'),
         },
@@ -110,7 +111,7 @@ const Indprofile = () => {
       rating,
     };
 
-    axios.post('http://localhost:5001/addreview', review, {
+    axios.post(`${url}/addreview`, review, {
         headers: {
           'x-token': localStorage.getItem('token'),
         },

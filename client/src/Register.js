@@ -14,7 +14,8 @@ const Register = () => {
   });
 
   const [message, setMessage] = useState(''); // To display success/error messages
-
+      // const url='http://localhost:5001/myprofile'
+  const url='https://developershub-3svr.onrender.com'
   const changeHandler = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -29,7 +30,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5001/register', data);
+      const response = await axios.post(`${url}/register`, data);
       console.log(data)
       setMessage(`✅ ${response.data.msg}`);
     } catch (err) {

@@ -7,6 +7,8 @@ import { Navigate } from "react-router-dom";
 
 const Login = () => {
   const [auth, setAuth] = useState(false);
+    // const url='http://localhost:5001/myprofile'
+  const url='https://developershub-3svr.onrender.com'
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -36,7 +38,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5001/login", data);
+      const response = await axios.post(`${url}/login`, data);
 
       // ✅ Store token in localStorage
       localStorage.setItem("token", response.data.token);
