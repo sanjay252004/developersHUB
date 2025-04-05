@@ -1,0 +1,120 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #222; /* Dark background */
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Centering the register form */
+.container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #f8f9fa; /* Light background */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for 'Sign Up' */
+.register-title {
+    color: #007bff; /* Blue */
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling for 'Create Your Account' */
+.register-subtitle {
+    color: #555; /* Dark Gray */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Submit Button */
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #28a745; /* Green */
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.register-btn:hover {
+    background: #218838;
+}
+
+/* Already have an account */
+.register-footer {
+    color: #333;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.login-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+.form-text {
+    display: block;
+    color: #6c757d; /* Gray color for readability */
+    font-size: 14px;
+    margin-top: 5px; /* Add space between input and text */
+}
+.form-group {
+    width: 100%;
+    margin-bottom: 15px; /* Space between input fields */
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
